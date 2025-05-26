@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Irvinne",
+    "email": "irvinne@cathalab.com",
+    "password": "irvinne123",
+    "redirect": "/bloom"
+  },
+  {
+    "name": "Reza",
+    "email": "reza@cathalab.com",
+    "password": "reza123",
+    "redirect": "/vivid"
+  },
+  {
+    "name": "Dhani",
+    "email": "dhani@cathalab.com",
+    "password": "dhani123",
+    "redirect": "/axios"
+  },
+  {
+    "name": "Andrew",
+    "email": "andrew@cathalab.com",
+    "password": "andrew123",
+    "redirect": "/lumen"
+  },
+  {
+    "name": "Winson",
+    "email": "winson@cathalab.com",
+    "password": "winson123",
+    "redirect": "/nova"
+  },
+  {
+    "name": "Operator Bloom",
+    "email": "operator.bloom@cathalab.com",
+    "password": "catha123",
+    "redirect": "/bloom"
+  },
+  {
+    "name": "Ander",
+    "email": "iskandar@cathalab.com",
+    "password": "ander123",
+    "redirect": "/ivy"
+  }
+]
