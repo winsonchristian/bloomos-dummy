@@ -1,5 +1,37 @@
-export default function handler(req, res) {
-  res.status(200).json({
-    message: "NextAuth will live here soon 👀🔐",
-  });
-}
+import NextAuth from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
+import users from "../../../../data/catha-users.json";
+
+export default NextAuth({
+  providers: [
+    CredentialsProvider({
+      name: "Credentials",
+      credentials: {
+        email: { label: "Email", type: "text" },
+        password: { label: "Password", type: "password" },
+      },
+      async authorize(credentials) {
+        const user = users.find(
+          (u) => u.email === credentials.email && u.password === credentials.password
+        );
+        if (user) {
+          return { name: user.name, email: user.email, redirect: user.redirect };
+        }
+        return null;
+      },
+    }),
+  ],
+  pages: {
+    signIn: "/login",
+  },
+  callbacks: {
+    async session({ session, token }) {
+      session.user.redirect = token.redirect;
+      return session;
+    },
+    async jwt({ token, user }) {
+      if (user) token.redirect = user.redirect;
+      return token;
+    },
+  },
+});
