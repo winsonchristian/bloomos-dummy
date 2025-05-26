@@ -1,2 +1,3 @@
-# bloomos-dummy
-Dummy system UI untuk OS Catha Lab
+# BloomOS Dummy
+
+Sistem dummy untuk percobaan UI OS Catha Lab.
