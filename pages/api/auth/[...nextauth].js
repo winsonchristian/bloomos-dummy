@@ -1,6 +1,10 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import users from "../../../../data/catha-users.json";
+import fs from "fs";
+import path from "path";
+
+const usersPath = path.join(process.cwd(), "data", "catha-users.json");
+const users = JSON.parse(fs.readFileSync(usersPath, "utf-8"));
 
 export default NextAuth({
   providers: [
