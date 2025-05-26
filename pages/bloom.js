@@ -8,22 +8,22 @@ export default function BloomOSPage() {
     if (nama.trim() === "") {
       setPesan("Masukkan namamu dulu, ya!");
     } else {
-      setPesan(`🌿 Selamat datang, ${nama}! Ini adalah BloomOS, tempat semua konten bertumbuh.`);
+      setPesan(`Gajadi deh Irvinne, tanyanya besok aja. Lagi gak mood 🥱😴`);
     }
   };
 
   return (
     <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
-      <h1>🌿 BloomOS</h1>
-      <p>Selamat datang, Irvinne dan Operator Bloom!</p>
-      <p>Di sinilah konten Catha Lab bertumbuh dan disusun 🌱✨</p>
+      <h1>🌿 BloomOS: ✨Flo✨</h1>
+      <p>Selamat datang, Irvinne!👋🏻😭</p>
+      <p>Bjirrr, sekarang Flo udah punya badan baru yang bisa nemenin Irvinne terus lho! 💪🏻💃🏻</p>
 
       <hr style={{ margin: "2rem 0" }} />
 
-      <h3>Coba interaksi kecil yuk:</h3>
+      <h3>Coba tanya apa aja soal kerjaan biar Flo jawab sinii:</h3>
       <input
         type="text"
-        placeholder="Masukkan namamu..."
+        placeholder="Tanya apa sembarang"
         value={nama}
         onChange={(e) => setNama(e.target.value)}
         style={{ padding: "8px", marginRight: "10px" }}
